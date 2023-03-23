@@ -10,16 +10,14 @@
 package src.constructors;
 // here package is default
 
-import java.util.Scanner;
-// here Scanner is the class having many methods which helps to take input from the user. 
-
-class D {
+class DefConst {
 
     int a;
     String b;
     boolean c;
+     // instance variables
 
-    D() { // default constructor
+    DefConst() { // default constructor
         a = 100;
         b = "kush"; 
         c = true;
@@ -33,12 +31,12 @@ class D {
     }
 }
 
- class E{
+ class Default{
     public static void main(String[] args) {
         // main method
 
-        D r = new D();
+        DefConst r = new DefConst();
         r.disp();
-        // here we are calling the methods of the class Person 
+        // here we are calling the methods of the class D
     }
 }

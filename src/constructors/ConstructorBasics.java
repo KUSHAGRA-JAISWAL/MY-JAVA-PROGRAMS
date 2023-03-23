@@ -10,13 +10,11 @@
 package src.constructors;
 // here package is default
 
-import java.util.Scanner;
-// here Scanner is the class having many methods which helps to take input from the user. 
-
 class A {
 
     int a;
     String name;
+     // instance variables
 
     /*A() {
         a = 0;

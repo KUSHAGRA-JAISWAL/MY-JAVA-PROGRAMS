@@ -1,11 +1,12 @@
-package assignments;
+package src.assignments;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 interface MathmeticalObject {
-    public int add();
+    public void add();
 
-    public int[] multiply();
+    public void multiply();
 }
 
 class Vector implements MathmeticalObject {
@@ -13,30 +14,36 @@ class Vector implements MathmeticalObject {
     int vector_A[];
     int vector_B[];
 
-    public int add() {
+    Vector() {
+        vector_A = new int[n];
+        vector_B = new int[n];
+    }
+
+    public void add() {
         int product = 0;
 
         for (int i = 0; i < n; i++) {
             product = product + vector_A[i] + vector_B[i];
+            
         }
-        return product;
+        System.out.println(product);
     }
 
-    public int[] multiply() {
+    public void multiply() {
         int cross_product[] = new int[3];
         cross_product[0] = vector_A[1] * vector_B[2] - vector_A[2] * vector_B[1];
         cross_product[1] = vector_A[2] * vector_B[0] - vector_A[0] * vector_B[1];
         cross_product[2] = vector_A[0] * vector_B[1] - vector_A[1] * vector_B[0];
-        return cross_product;
+        System.out.println(Arrays.toString(cross_product));
     }
 }
 
 class Matrix implements MathmeticalObject {
     int n = 3;
-    int matrix_A[][];
-    int matrix_B[][];
+    int matrix_A[][] = new int[n][n];;
+    int matrix_B[][] = new int[n][n];;
 
-    public int add() {
+    public void add() {
         int product[][] = new int[n][n];
 
         for (int i = 0; i < n; i++) {
@@ -46,10 +53,9 @@ class Matrix implements MathmeticalObject {
             }
             System.out.println();
         }
-        return 0;
     }
 
-    public int[] multiply() {
+    public void multiply() {
         int product[][] = new int[3][3];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -61,51 +67,61 @@ class Matrix implements MathmeticalObject {
             }
             System.out.println();
         }
-        return null;
     }
 }
 
 class Driver {
     public static void main(String[] args) {
         Vector vec = new Vector();
-        int vector_A[] = new int[vec.n];
-        int vector_B[] = new int[vec.n];
-        int cross_product[] = new int[vec.n];
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter the elements of vector A: ");
         for (int i = 0; i < vec.n; i++) {
-            vector_A[i] = sc.nextInt();
+            System.out.print("Enter the value for [" + i + "]: ");
+            vec.vector_A[i] = sc.nextInt();
+            System.out.println();
         }
         System.out.println("Enter the elements of vector B: ");
         for (int i = 0; i < vec.n; i++) {
-            vector_B[i] = sc.nextInt();
+            System.out.print("Enter the value for [" + i + "]: ");
+            vec.vector_B[i] = sc.nextInt();
+            System.out.println();
         }
 
         // dot product
         System.out.print("Dot product:");
-        System.out.println(vec.add(vector_A, vector_B));
+        vec.add();
 
         // cross product
         System.out.print("Cross product:");
-        vec.multiply(vector_A, vector_B, cross_product);
+        vec.multiply();
         System.out.println();
 
-        for (int i = 0; i < vec.n; i++) {
-            System.out.print(cross_product[i] + " ");
-        }
-
         Matrix mat = new Matrix();
-        int matrix_A[][] = { { 2, 3, 4 }, { 5, 6, 7 }, { 8, 9, 10 } };
-        int matrix_B[][] = { { 1, 1, 1 }, { 1, 1, 1 }, { 1, 1, 1 } };
-        int product[][] = new int[mat.n][mat.n];
+
+        System.out.println("Enter the elements of matrix A: ");
+        for (int i = 0; i < mat.n; i++) {
+            for (int j = 0; j < mat.n; j++) {
+                System.out.print("Enter the value for [" + i + "] [" + j + "]: ");
+                mat.matrix_A[i][j] = sc.nextInt();
+                System.out.println();
+            }
+        }
+        System.out.println("Enter the elements of matrix B: ");
+        for (int i = 0; i < mat.n; i++) {
+            for (int j = 0; j < mat.n; j++) {
+                System.out.print("Enter the value for [" + i + "] [" + j + "]: ");
+                mat.matrix_B[i][j] = sc.nextInt();
+                System.out.println();
+            }
+        }
 
         // addition
         System.out.println("Addition of matrix A and B: ");
-        System.out.println(mat.add(matrix_A, matrix_B));
+        mat.add();
 
         // multiplication
         System.out.println("Multiplication of matrix A and B: ");
-        mat.multiply(matrix_A, matrix_B, product);
+        mat.multiply();
     }
 }
