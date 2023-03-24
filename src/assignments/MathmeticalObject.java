@@ -1,7 +1,6 @@
 package src.assignments;
 
 import java.util.Scanner;
-import java.util.Arrays;
 
 interface MathmeticalObject {
     public void add();
@@ -11,30 +10,32 @@ interface MathmeticalObject {
 
 class Vector implements MathmeticalObject {
     int n = 3;
-    int vector_A[];
-    int vector_B[];
+    double vector_A[];
+    double vector_B[];
+    double product[];
 
     Vector() {
-        vector_A = new int[n];
-        vector_B = new int[n];
+        vector_A = new double[n];
+        vector_B = new double[n];
+        product = new double[n];
     }
 
     public void add() {
-        int product = 0;
-
+        double Addition[] = new double[3];
         for (int i = 0; i < n; i++) {
-            product = product + vector_A[i] + vector_B[i];
-            
+            Addition[i] = vector_A[i] * vector_B[i];
+            System.out.print(Addition[i] + " ");
         }
-        System.out.println(product);
+        System.out.println();
     }
 
     public void multiply() {
-        int cross_product[] = new int[3];
-        cross_product[0] = vector_A[1] * vector_B[2] - vector_A[2] * vector_B[1];
-        cross_product[1] = vector_A[2] * vector_B[0] - vector_A[0] * vector_B[1];
-        cross_product[2] = vector_A[0] * vector_B[1] - vector_A[1] * vector_B[0];
-        System.out.println(Arrays.toString(cross_product));
+        double multysum = 0;
+        for (int i = 0; i < n; i++) {
+            product[i] = vector_A[i] * vector_B[i];
+            multysum = multysum + product[i];
+        }
+        System.out.println(multysum);
     }
 }
 
@@ -75,6 +76,7 @@ class Driver {
         Vector vec = new Vector();
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("_________VECTOR AND MATRIX OPERATIONS_________\n");
         System.out.println("Enter the elements of vector A: ");
         for (int i = 0; i < vec.n; i++) {
             System.out.print("Enter the value for [" + i + "]: ");
@@ -89,11 +91,11 @@ class Driver {
         }
 
         // dot product
-        System.out.print("Dot product:");
+        System.out.print("Addition of two Vectors: ");
         vec.add();
 
         // cross product
-        System.out.print("Cross product:");
+        System.out.print("\nProduct of two vectors: ");
         vec.multiply();
         System.out.println();
 

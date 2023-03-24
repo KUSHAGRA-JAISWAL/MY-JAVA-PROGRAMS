@@ -1,55 +1,54 @@
-package assignments;
+package src.assignments;
 
 import java.util.Scanner;
 
 public class Complex {
-    private float realNum;
-    private float imgNum;
+    private double realNum;
+    private double imaginaryNum;
 
     public Complex() {
-        this.realNum = 0;
-        this.imgNum = 0;
+        realNum = 0.0;
+        imaginaryNum = 0.0;
     }
 
-    public Complex(float realNum, float imgNum) {
+    public Complex(double realNum, double imaginaryNum) {
         this.realNum = realNum;
-        this.imgNum = imgNum;
+        this.imaginaryNum = imaginaryNum;
     }
 
-    public Complex addComplex(Complex realImg1, Complex realImg2) {
-        Complex com = new Complex(0, 0);
-        com.realNum = realImg1.realNum + realImg2.realNum;
-        com.imgNum = realImg1.imgNum + realImg2.imgNum;
-        return com;
+    public Complex add(Complex c) {
+        double newrealNum = realNum + c.realNum;
+        double newimaginaryNum = imaginaryNum + c.imaginaryNum;
+        return new Complex(newrealNum, newimaginaryNum);
     }
 
-    public Complex subComplex(Complex realImg1, Complex realImg2) {
-        Complex com = new Complex(0, 0);
-        com.realNum = realImg1.realNum - realImg2.realNum;
-        com.imgNum = realImg1.imgNum - realImg2.imgNum;
-        return com;
+    public Complex subtract(Complex c) {
+        double newrealNum = realNum - c.realNum;
+        double newimaginaryNum = imaginaryNum - c.imaginaryNum;
+        return new Complex(newrealNum, newimaginaryNum);
     }
 
+    public void print() {
+        System.out.printf("%f + (%f)i\n", realNum, imaginaryNum);
+    }
+}
+
+class DriverComplex {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter first real number: \n");
-        float realNum1 = sc.nextFloat();
-        System.out.print("Enter first imaginary number: \n");
-        float imgNum1 = sc.nextFloat();
-        System.out.print("Enter Second real number: \n");
-        float realNum2 = sc.nextFloat();
-        System.out.print("Enter Second imaginary number: \n");
-        float imgNum2 = sc.nextFloat();
-
-        Complex realImg1 = new Complex(realNum1, imgNum1);
-        Complex realImg2 = new Complex(realNum2, imgNum2);
-        Complex realImg3 = new Complex(0, 0);
-
-        realImg3 = realImg3.addComplex(realImg1, realImg2);
-        System.out.println("Addition of two complex numbers is: " + realImg3.realNum + " + " + realImg3.imgNum + "i");
-
-        realImg3 = realImg3.subComplex(realImg1, realImg2);
-        System.out.println("Subtraction of two complex numbers is: " + realImg3.realNum + " + " + realImg3.imgNum + "i");
+        System.out.print("Enter real and imaginary part for fist number: ");
+        Complex c1 = new Complex(sc.nextDouble(), sc.nextDouble());
+        System.out.print("Enter real and imaginary part for second number: ");
+        Complex c2 = new Complex(sc.nextDouble(), sc.nextDouble());
+        Complex sum = c1.add(c2);
+        Complex diff = c1.subtract(c2);
+        System.out.println("Complex numbers");
+        c1.print();
+        c2.print();
+        System.out.print("\nTheir Sum: ");
+        sum.print();
+        System.out.print("\nTheir Difference: ");
+        diff.print();
+        sc.close();
     }
-
 }

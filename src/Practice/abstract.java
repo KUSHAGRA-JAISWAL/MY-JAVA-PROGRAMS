@@ -1,4 +1,4 @@
-package src.college;
+package src.practice;
 
 // This is an abstract class
 abstract class Ab {
