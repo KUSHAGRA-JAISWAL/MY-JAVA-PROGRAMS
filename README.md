@@ -1,3 +1,5 @@
+ <img src="https://i.imgur.com/QhRSIn8.gif"  height=250px width=500px>
+
 # Learning Section <img src="https://i.imgur.com/ARXvPUn.gif"  height=45px>
 
 ## Basics
