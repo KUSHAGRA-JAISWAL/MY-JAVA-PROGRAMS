@@ -2,7 +2,7 @@
  * @file StringBasics.java
  * @author KUSHAGRA JAISWAL 
  * @date 2023-03-22
- * @copyright Copyright (c) 2022
+ * @copyright Copyright (c) 2023
  */
 
 /* Java program to Show the concept of Strings. */
