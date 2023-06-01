@@ -1,4 +1,4 @@
-package src.assignments.cat2.multithreading;
+package src.assignments.cat_2.multithreading;
 
 import java.io.FileWriter;
 import java.io.IOException;

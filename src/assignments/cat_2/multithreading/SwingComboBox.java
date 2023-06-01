@@ -1,4 +1,4 @@
-package src.assignments.cat2.multithreading;
+package src.assignments.cat_2.multithreading;
 
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;

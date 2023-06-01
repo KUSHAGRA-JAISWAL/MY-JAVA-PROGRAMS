@@ -173,3 +173,21 @@
 |14. **[SynchronizedBlock.java:](src/multithreading/SynchronizedBlock.java)**| Java program to Show the concept of Block Level Syncronization in Multithreading.|
 |15. **[StaticSynchronization.java:](src/multithreading/StaticSynchronization.java)**| Java program to Show the concept of Static Syncronization in Multithreading.|
 <br>
+
+## Generics
+| Programs                                           |Discription                             |
+|----------------------------------------------------|----------------------------------------|
+|1. **[NonGenericsCode.java:](src/generics_java/NonGenericsCode.java)**| Java program to Show the concept of Non Generics Code in Java Generics.|
+|2. **[GenericsCode.java:](src/generics_java/GenericsCode.java)**| Java program to Show the concept of Generics Code in Java Generics.|
+|3. **[RulesGenerics.java:](src/generics_java/RulesGenerics.java)**| Java program to Show the concept of Rules of Generics in Java Generics.|
+
+### Examle Class Box Generics And Methods
+| Programs                                           |Discription                             |
+|----------------------------------------------------|----------------------------------------|
+|1. **[BoxGenerics.java:](src/generics_java/BoxGenerics/BoxGenerics.java)**| Java program to Show the concept of Box example in Java Generics.|
+|2. **[Book.java:](src/generics_java/BoxGenerics/Book.java)**| Java program to Show the concept of Box example Class Book in Java Generics.|
+|3. **[Fruit.java:](src/generics_java/BoxGenerics/Fruit.java)**| Java program to Show the concept of Box example Class Fruit in Java Generics.|
+|4. **[BoxUtils.java:](src/generics_java/BoxGenerics/BoxUtils.java)**| Java program to Show the concept of Box example Class BoxUtils in Java Generics.|
+|5. **[TestBoxGenerics.java:](src/generics_java/BoxGenerics/TestBoxGenerics.java)**| Java program to Show the concept of Box example class TestBoxGenerics in Java Generics.|
+
+<br>
