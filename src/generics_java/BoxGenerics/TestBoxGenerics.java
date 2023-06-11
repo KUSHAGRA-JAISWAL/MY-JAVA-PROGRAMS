@@ -1,7 +1,7 @@
 /**
  * @file TestBoxGenerics.java
  * @author KUSHAGRA JAISWAL 
- * @date 2023-05-01
+ * @date 2023-06-01
  * @copyright Copyright (c) 2023
  */
 
@@ -22,14 +22,17 @@ public class TestBoxGenerics{
         bookBox.addItem(new Book("Let Us C", "Yashwant Kanetkar", 0.3));
         // adding items in the list.
 
-        System.out.println(bookBox.getLatestItem());
+        System.out.println("Last Book: "+ bookBox.getLatestItem());
         // printing the latest item from the list.
 
         System.out.println(bookBox);
         // printing the object of BoxGenerics class with Book type.
 
-        System.out.println(BoxUtils.getCountOfItems(bookBox));
+        System.out.println("Number of Books: "+ BoxUtils.getCountOfItems(bookBox));
         // printing the count of items in the list.
+
+        System.out.println("Total Weight of Book Box: "+ bookBox.getTotalWeight());
+        // printing the total weight of the items in the list.
 
         BoxGenerics<Fruit> fruitBox = new BoxGenerics<>();
         // creating object of BoxGenerics class with Fruit type.
@@ -38,14 +41,17 @@ public class TestBoxGenerics{
         fruitBox.addItem(new Fruit("Orange", "India", "Orange", 0.3));
         // adding items in the list.
 
-        System.out.println(fruitBox.getLatestItem());
+        System.out.println("Last Fruit: "+ fruitBox.getLatestItem());
         // printing the latest item from the list.
 
         System.out.println(fruitBox);
         // printing the object of BoxGenerics class with Fruit type.
 
-        System.out.println(BoxUtils.getCountOfItems(fruitBox));
+        System.out.println("Number of Fruits: "+ BoxUtils.getCountOfItems(fruitBox));
         // printing the count of items in the list.
+
+        System.out.println("Total Weight of Fruit Box: "+ fruitBox.getTotalWeight());
+        // printing the total weight of the items in the list.
 
     }
 }

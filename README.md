@@ -189,5 +189,16 @@
 |3. **[Fruit.java:](src/generics_java/BoxGenerics/Fruit.java)**| Java program to Show the concept of Box example Class Fruit in Java Generics.|
 |4. **[BoxUtils.java:](src/generics_java/BoxGenerics/BoxUtils.java)**| Java program to Show the concept of Box example Class BoxUtils in Java Generics.|
 |5. **[TestBoxGenerics.java:](src/generics_java/BoxGenerics/TestBoxGenerics.java)**| Java program to Show the concept of Box example class TestBoxGenerics in Java Generics.|
+|6. **[Boxable.java:](src/generics_java/BoxGenerics/Boxable.java)**| Java program to Show the concept of Box example interface Boxable in Java Generics.|
+|7. **[CardboardBox.java:](src/generics_java/BoxGenerics/CardboardBox.java)**| Java program to Show the concept of Generic Hierarchies Using Java Generics.|
+|8. **[Apple.java:](src/generics_java/BoxGenerics/Apple.java)**| Java program to Show the concept of Generic Hierarchies (Type Argument Hierarchies) Apple Class Using Java Generics.|
+|9. **[TestGenericsHierarchies.java:](src/generics_java/BoxGenerics/TestGenericsHierarchies.java)**| Java program to Show the concept of Generic Hierarchies (Type Argument Hierarchies) Test Class Using Java Generics.|
+|10. **[TestTypeInferences.java:](src/generics_java/BoxGenerics/TestTypeInferences.java)**| Java program to Show the concept of Type Infrences in java Generics.|
+|11. **[TestWildcards.java:](src/generics_java/BoxGenerics/TestWildcards.java)**| Java program to Show the concept of Wildcards(?) in java Generics.|
 
+### Mathmetical_Operations_Generics
+| Programs                                           |Discription                             |
+|----------------------------------------------------|----------------------------------------|
+|1. **[NumericalOperations.java:](src/generics_java/MathmeticalOperationsGenerics/NumericalOperations.java)**| Java program to Show the concept of Mathmetical operations Using Java Generics.|
+|2. **[TestNumericalOperations.java:](src/generics_java/MathmeticalOperationsGenerics/TestNumericalOperations.java)**| Java program to Show the concept of Mathmetical operations Test Class Using Java Generics.|
 <br>

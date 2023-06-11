@@ -1,7 +1,7 @@
 /**
  * @file Fruit.java
  * @author KUSHAGRA JAISWAL 
- * @date 2023-05-01
+ * @date 2023-06-01
  * @copyright Copyright (c) 2023
  */
 
@@ -10,8 +10,9 @@
 package src.generics_java.BoxGenerics;
 // here package is default
 
-public class Fruit {
+public class Fruit implements Boxable{
     // user defined class Fruit
+    // here Boxable is a user defined interface.
 
     private String name;
     private String countryOfOrigin;
